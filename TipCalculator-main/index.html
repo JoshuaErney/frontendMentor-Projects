@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+
+    <title>Modern Tip Calculator</title>
+
+    <link rel="stylesheet" href="/TipCalculator-main/css/main.css">
+</head>
+
+<body>
+    <header></header>
+    <main class="tip-calculator-container">
+        <section class="tip-dataEntry-panel">
+            <form>
+                <div class="form-input-container">
+                    <label for="bill-total">Total Bill</label>
+                    <input type="number" name="bill-total" id="bill-total" min="0" step="0.01" placeholder="0.00">
+                </div>
+
+                <fieldset class="form-input-container">
+                    <legend>Select Tip (%):</legend>
+                    <label>
+                        <input type="radio" name="tip" value="5"> 5%
+                    </label>
+                    <label>
+                        <input type="radio" name="tip" value="10"> 10%
+                    </label>
+                    <label>
+                        <input type="radio" name="tip" value="15"> 15%
+                    </label>
+                    <label>
+                        <input type="radio" name="tip" value="20"> 20%
+                    </label>
+                    <label>
+                        <input type="radio" name="tip" value="25"> 25%
+                    </label>
+                </fieldset>
+
+                <div class="form-input-container">
+                    <label for="num-people">Number of People</label>
+                    <input type="number" name="num-people" id="num-people" min="1" value="" placeholder="0" required>
+                </div>
+            </form>
+        </section>
+
+        <section class="tip-info-panel">
+            <dl>
+                <dt>Tip Amount</dt>
+                <span>/ per person</span>
+                <dd>
+                    <output id="total-per-person">$0.00</output>
+                </dd>
+            </dl>
+
+            <dl>
+                <dt>Total</dt>
+                <span>/ per person</span>
+                <dd>
+                    <output id="tip-per-person">$0.00</output>
+                </dd>
+            </dl>
+        </section>
+    </main>
+    <footer></footer>
+</body>
+
+</html>

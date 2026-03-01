@@ -1,0 +1,92 @@
+html,
+body {
+    font-family: "Lora", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+
+    line-height: 1.5;
+    font-size: 16px;
+    letter-spacing: .10rem;
+    background-color: #c5e4e7;
+    height: 100%;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 100%;
+    padding: 20px;
+}
+
+button {
+    background-color: #00474b;
+    color: #f3f8fb;
+}
+
+input {
+    background-color: #dceff0;
+}
+
+p {
+    color: #606b6c;
+}
+
+main.tip-calculator-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #f3f8fb;
+    width: 850px;
+    height: 500px;
+    padding: 30px;
+    border-radius: 12px;
+    background-color: #f3f8fb;
+}
+
+section.tip-dataEntry-panel {
+    display: flex;
+    height: 100%;
+}
+
+section.tip-info-panel {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: #00474b;
+    border-radius: 10px;
+    height: 100%;
+}
+
+#tip-form {
+    width: 100%;
+}
+
+div.form-input-container {
+    display: flex;
+    flex-direction: column;
+}
+
+div.form-input-container>label {
+    color: #00474b;
+    font-weight: bold;
+}
+
+dt {
+    color: #f3f8fb;
+}
+
+dl>span {
+    color: lightslategray;
+}
+
+output {
+    color: #2fc1af;
+}
