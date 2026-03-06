@@ -7,7 +7,7 @@ body {
 
     line-height: 1.5;
     font-size: 16px;
-    letter-spacing: .10rem;
+    letter-spacing: 0.1rem;
     background-color: #c5e4e7;
     height: 100%;
 }
@@ -26,17 +26,86 @@ form {
     padding: 20px;
 }
 
-button {
-    background-color: #00474b;
-    color: #f3f8fb;
-}
-
 input {
     background-color: #dceff0;
 }
 
 p {
-    color: #606b6c;
+    color: #f3f8fb;
+    margin: 0;
+    font-size: 1rem;
+}
+
+span {
+    color: #999;
+    font-size: .75rem;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #f3f8fb;
+    color: #00474b;
+    font-size: 1rem;
+    border: 1px solid #f3f8fb;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+button:active {
+    background: #e5e5e5;
+    -webkit-box-shadow: inset 0px 0px 5px #c1c1c1;
+    -moz-box-shadow: inset 0px 0px 5px #c1c1c1;
+    box-shadow: inset 0px 0px 5px #c1c1c1;
+}
+
+output {
+    color: #2fc1af;
+    font-size: 1.75rem;
+}
+
+fieldset {
+    border: none;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.75rem;
+    padding: 0;
+}
+
+input[type="number"] {
+    border: 1px solid lightslategrey;
+    border-radius: 6px;
+    padding: 15px;
+    font-size: 16px;
+}
+
+input[type="number"]:focus {
+    outline: 1px solid #00474b;
+}
+
+input[type="radio"] {
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: #fff;
+    margin: 0;
+}
+
+label.radio-btn-container {
+    border: 1px solid #00474b;
+    padding: 0.5rem 1rem;
+    display: inline-block;
+    text-align: center;
+    border-radius: 8px;
+}
+
+label.radio-btn-container:hover {
+    background-color: #00474b;
+    color: #fff;
+}
+
+label.radio-btn-container:has(input:checked) {
+    background-color: #00474b;
+    color: #fff;
 }
 
 main.tip-calculator-container {
@@ -58,11 +127,19 @@ section.tip-dataEntry-panel {
 }
 
 section.tip-info-panel {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
     background-color: #00474b;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
     border-radius: 10px;
     height: 100%;
+}
+
+div.checkout-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
 }
 
 #tip-form {
@@ -74,19 +151,10 @@ div.form-input-container {
     flex-direction: column;
 }
 
-div.form-input-container>label {
+div.form-input-container>label,
+legend {
     color: #00474b;
     font-weight: bold;
-}
-
-dt {
-    color: #f3f8fb;
-}
-
-dl>span {
-    color: lightslategray;
-}
-
-output {
-    color: #2fc1af;
+    font-size: 1.125rem;
+    padding-bottom: 10px;
 }
