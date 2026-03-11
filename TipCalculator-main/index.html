@@ -27,19 +27,19 @@
                 <fieldset class="form-input-container">
                     <legend>Select Tip (%):</legend>
                     <label for="tip10" class="radio-btn-container">
-                        <input type="radio" name="tip" value=".10" id="tip10" /> 10%
+                        <input type="radio" name="tip" value="0.10" id="tip10" /> 10%
                     </label>
                     <label for="tip15" class="radio-btn-container">
-                        <input type="radio" name="tip" value=".15" id="tip15" /> 15%
+                        <input type="radio" name="tip" value="0.15" id="tip15" /> 15%
                     </label>
                     <label for="tip20" class="radio-btn-container">
-                        <input type="radio" name="tip" value=".20" id="tip20" /> 20%
+                        <input type="radio" name="tip" value="0.20" id="tip20" /> 20%
                     </label>
                     <label for="tip25" class="radio-btn-container">
-                        <input type="radio" name="tip" value=".25" id="tip25" /> 25%
+                        <input type="radio" name="tip" value="0.25" id="tip25" /> 25%
                     </label>
                     <label for="tip30" class="radio-btn-container">
-                        <input type="radio" name="tip" value=".30" id="tip30" /> 30%
+                        <input type="radio" name="tip" value="0.30" id="tip30" /> 30%
                     </label>
                 </fieldset>
 
@@ -57,7 +57,7 @@
                         <p>Tip Amount</p>
                         <span>/ per person</span>
                     </div>
-                    <output id="total-per-person">$0.00</output>
+                    <output id="tip-per-person" for="billTotal tip10 tip15 tip20 tip25 tip30" form="tip-form">$0.00</output>
                 </div>
 
                 <div class="checkout-row">
@@ -65,7 +65,7 @@
                         <p>Total</p>
                         <span>/ per person</span>
                     </div>
-                    <output id="tip-per-person">$0.00</output>
+                    <output id="total-per-person" for="billTotal tip10 tip15 tip20 tip25 tip30 numOfPeople" form="tip-form">$0.00</output>
                 </div>
             </div>
             <div class="btn-group">
