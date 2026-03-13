@@ -1,0 +1,38 @@
+/* 
+--red-ochre: #C83C0Eff; - buttons and secondary heading & price text
+--parchment: #FCF8F5ff; - background of website
+--ash-grey: #B3CCBFff; - icons 
+--coffee-bean: #281716ff; - primary heading
+*/
+
+body {
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+
+    background-color: #E7E5E5;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+    padding: 25px 100px;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+.feather {
+    width: 16px;
+    height: 16px;
+    stroke: currentColor;
+    stroke-width: 1;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    fill: none;
+}
