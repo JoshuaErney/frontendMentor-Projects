@@ -12,19 +12,58 @@ body {
     font-style: normal;
     font-variation-settings: "wdth" 100;
 
+    line-height: normal;
     background-color: #E7E5E5;
+    position: relative;
 }
 
 main {
     display: grid;
     grid-template-columns: 2fr 1fr;
     gap: 2rem;
-    padding: 25px 100px;
+    padding: 75px 100px;
 }
+
+dialog {
+    position: absolute;
+    top: 250px;
+    border: 1px solid transparent;
+    border-radius: 25px;
+    width: 450px;
+    height: auto;
+}
+
+ul {
+    padding: 0;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style-type: none;
+    text-decoration: none;
+    padding: 10px 0;
+}
+
+h3 {}
 
 img {
     width: 100%;
     height: auto;
+}
+
+footer,
+header {
+    width: 100%;
+}
+
+hr {
+    border: none;
+    width: 100%;
+    height: 1px;
+    color: #999;
+    background-color: #999;
 }
 
 .feather {
@@ -35,4 +74,8 @@ img {
     stroke-linecap: round;
     stroke-linejoin: round;
     fill: none;
+}
+
+strong {
+    font-weight: bold;
 }

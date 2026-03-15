@@ -26,8 +26,8 @@
                 <article class="card">
                     <header class="card-header">
                         <img src="https://placehold.co/600@2x.png" alt="Food Item">
-                        <div>
-                            <button type="button"><i data-feather="shopping-cart"></i> Add to Cart</button>
+                        <div class="action-container">
+                            <button type="button" class="order-controls"><i data-feather="shopping-cart"></i> Add to Cart</button>
                             <div class="qty-controls">
                                 <button type="button"><i data-feather="minus-circle"></i></button>
                                 <data value="" class="food-quantity"></data>
@@ -50,8 +50,8 @@
                 <article class="card">
                     <header class="card-header">
                         <img src="https://placehold.co/600@2x.png" alt="Food Item">
-                        <div>
-                            <button type="button"><i data-feather="shopping-cart"></i> Add to Cart</button>
+                        <div class="action-container">
+                            <button type="button" class="order-controls"><i data-feather="shopping-cart"></i> Add to Cart</button>
                             <div class="qty-controls">
                                 <button type="button"><i data-feather="minus-circle"></i></button>
                                 <data value="" class="food-quantity"></data>
@@ -74,80 +74,8 @@
                 <article class="card">
                     <header class="card-header">
                         <img src="https://placehold.co/600@2x.png" alt="Food Item">
-                        <div>
-                            <button type="button"><i data-feather="shopping-cart"></i> Add to Cart</button>
-                            <div class="qty-controls">
-                                <button type="button"><i data-feather="minus-circle"></i></button>
-                                <data value="" class="food-quantity"></data>
-                                <button type="button"><i data-feather="plus-circle"></i></button>
-                            </div>
-                        </div>
-                    </header>
-                    <footer class="card-footer">
-                        <h3 class="food-name"></h3>
-                        <section class="classification">
-                            <data class="food-category" value=""></data>
-                            <data class="food-type" value=""></data>
-                        </section>
-                        <section class="transactional">
-                            <data class="food-price" value=""></data>
-                            <data class="food-quantity" value=""></data>
-                        </section>
-                    </footer>
-                </article>
-                <article class="card">
-                    <header class="card-header">
-                        <img src="https://placehold.co/600@2x.png" alt="Food Item">
-                        <div>
-                            <button type="button"><i data-feather="shopping-cart"></i> Add to Cart</button>
-                            <div class="qty-controls">
-                                <button type="button"><i data-feather="minus-circle"></i></button>
-                                <data value="" class="food-quantity"></data>
-                                <button type="button"><i data-feather="plus-circle"></i></button>
-                            </div>
-                        </div>
-                    </header>
-                    <footer class="card-footer">
-                        <h3 class="food-name"></h3>
-                        <section class="classification">
-                            <data class="food-category" value=""></data>
-                            <data class="food-type" value=""></data>
-                        </section>
-                        <section class="transactional">
-                            <data class="food-price" value=""></data>
-                            <data class="food-quantity" value=""></data>
-                        </section>
-                    </footer>
-                </article>
-                <article class="card">
-                    <header class="card-header">
-                        <img src="https://placehold.co/600@2x.png" alt="Food Item">
-                        <div>
-                            <button type="button"><i data-feather="shopping-cart"></i> Add to Cart</button>
-                            <div class="qty-controls">
-                                <button type="button"><i data-feather="minus-circle"></i></button>
-                                <data value="" class="food-quantity"></data>
-                                <button type="button"><i data-feather="plus-circle"></i></button>
-                            </div>
-                        </div>
-                    </header>
-                    <footer class="card-footer">
-                        <h3 class="food-name"></h3>
-                        <section class="classification">
-                            <data class="food-category" value=""></data>
-                            <data class="food-type" value=""></data>
-                        </section>
-                        <section class="transactional">
-                            <data class="food-price" value=""></data>
-                            <data class="food-quantity" value=""></data>
-                        </section>
-                    </footer>
-                </article>
-                <article class="card">
-                    <header class="card-header">
-                        <img src="https://placehold.co/600@2x.png" alt="Food Item">
-                        <div>
-                            <button type="button"><i data-feather="shopping-cart"></i> Add to Cart</button>
+                        <div class="action-container">
+                            <button type="button" class="order-controls"><i data-feather="shopping-cart"></i> Add to Cart</button>
                             <div class="qty-controls">
                                 <button type="button"><i data-feather="minus-circle"></i></button>
                                 <data value="" class="food-quantity"></data>
@@ -171,39 +99,61 @@
         </section>
 
         <aside id="shopping-cart">
-            <h3 id="cart-title">Your Cart (<span id="cartItem-quantity" aria-live="polite">0</span>)</h3>
+            <header>
+                <h3 id="cart-title">Your Cart (<span id="cartItem-qty" aria-live="polite">0</span>)</h3>
+                <hr>
+            </header>
             <ul id="cart-container"></ul>
-            <div class="order-summary">
-                <p class="total-line">
-                    <strong>Order Total</strong>
-                    <output for="cart-container" id="order-total-display">
-                        <data value="0.00">$0.00</data>
-                    </output>
-                </p>
+            <footer>
+                <hr>
+                <div class="order-summary">
+                    <p class="total-line">
+                        <strong>Order Total</strong>
+                        <output for="cart-container" id="order-total-display">
+                            <data value="0.00" id="sum-total">$0.00</data>
+                        </output>
+                    </p>
 
-                <small class="delivery-badge">
-                    <span aria-hidden="true"><i data-feather="heart"></i></span> This is a carbon neutral delivery
-                </small>
-            </div>
-
-            <button type="button" id="confirm-order">Confirm Order</button>
+                    <small class="delivery-badge">
+                        <span aria-hidden="true">
+                            <i data-feather="heart" id="carbon-neutral-icon"></i>
+                        </span> This is a carbon neutral delivery
+                    </small>
+                </div>
+                <button type="button" id="confirm-order">Confirm Order</button>
+            </footer>
         </aside>
     </main>
 
-    <script>
-        feather.replace();
-    </script>
-
-    <dialog>
+    <dialog role="dialog" id="shoppingCart-Dialog">
         <section id="shopping-cart" aria-labelledby="cart-title">
             <header>
-                <h3 id="cart-title"><i data-feather="check-circle"></i> Your Order has been confirmed!</h3>
-                <p>We hope you enjoy your food</p>
+                <i data-feather="check-circle"></i>
+                <div>
+                    <h3 id="dialog-title">Your Order has been confirmed!</h3>
+                    <p>We hope you enjoy your food</p>
+                </div>
             </header>
 
-            <footer>
-                <ul id="cart-container"></ul>
+            <ul id="cart-container">
+                <li class="cart-item">
+                    <div>
+                        <strong class="item-name">Item#1</strong>
+                        <div class="item-details">
+                            <label>Qty:
+                                <data class="item-qty" value="">0</data>
+                            </label>
+                            <small class="unit-price">($0.00 each)</small>
+                        </div>
+                    </div>
+                    <div class="price-info">
+                        <data class="item-total" value="">$0.00</data>
+                        <i data-feather="x-circle"></i>
+                    </div>
+                </li>
+            </ul>
 
+            <footer>
                 <div class="order-summary">
                     <p class="total-line">
                         <strong>Order Total</strong>
@@ -214,7 +164,7 @@
                 </div>
             </footer>
 
-            <button type="button" id="new-order">Start New Order</button>
+            <button type="button" id="new-order" autofocus>Start New Order</button>
         </section>
     </dialog>
 
@@ -265,6 +215,11 @@
         </li>
     </template>
 
+    <script>
+        feather.replace();
+    </script>
+
+    <script src="./js/main.js"></script>
 </body>
 
 </html>
