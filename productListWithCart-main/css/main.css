@@ -25,12 +25,10 @@ main {
 }
 
 dialog {
-    position: absolute;
-    top: 250px;
     border: 1px solid transparent;
     border-radius: 25px;
-    width: 450px;
-    height: auto;
+    width: 500px;
+    height: 500px;
 }
 
 ul {
@@ -45,8 +43,6 @@ li {
     text-decoration: none;
     padding: 10px 0;
 }
-
-h3 {}
 
 img {
     width: 100%;

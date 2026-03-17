@@ -63,6 +63,13 @@ p.total-line {
     stroke-width: 2;
 }
 
+.feather#checkmark-icon {
+    stroke: #85CB33;
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-bottom: 15px;
+}
+
 data#sum-total {
     font-size: 1.75rem;
     color: #C83C0Eff;
@@ -131,11 +138,16 @@ div.price-info {
 
 ul#cart-container {
     height: 100%;
+    width: 100%;
     padding: 0 40px;
     background-color: #FCF8F5ff;
 }
 
 #dialog-title {
     margin: 0;
+}
 
+dialog::backdrop {
+    background-color: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(8px);
 }
