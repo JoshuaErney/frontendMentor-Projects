@@ -24,35 +24,40 @@ async function getJSONData() {
         }
 
         const result = await response.json();
-
-        result.forEach(item => {
-            let card = cardTemplate.content.cloneNode(true);
-            const cardTitle = card.querySelector('h3.food-name');
-            const cardCategory = card.querySelector('data.food-category');
-            const cardType = card.querySelector('data.food-type');
-            const cardPrice = card.querySelector('data.food-price');
-            const cardqty = card.querySelector('data.food-quantity');
-
-            cardTitle.textContent = item.name
-
-            cardCategory.textContent = item.category
-            cardCategory.value = item.category
-
-            cardType.textContent = item.type
-            cardType.value = item.type
-
-            cardPrice.textContent = item.price
-            cardPrice.value = item.price
-
-            cardqty.textContent = item.quantity
-            cardqty.value = item.quantity
-
-            menuContainer.appendChild(card);
-        });
+        displayDesserts(result);
 
     } catch (error) {
         console.error(error.message);
     }
 }
 
+function displayDesserts(data) {
+    data.forEach(item => {
+        let card = cardTemplate.content.cloneNode(true);
+        const cardTitle = card.querySelector('h3.food-name');
+        const cardCategory = card.querySelector('data.food-category');
+        const cardType = card.querySelector('data.food-type');
+        const cardPrice = card.querySelector('data.food-price');
+        const cardqty = card.querySelector('data.food-quantity');
+
+        cardTitle.textContent = item.name
+
+        cardCategory.textContent = item.category
+        cardCategory.value = item.category
+
+        cardType.textContent = item.type
+        cardType.value = item.type
+
+        cardPrice.textContent = `$${item.price}`
+        cardPrice.value = Number(item.price);
+
+        cardqty.textContent = item.quantity
+        cardqty.value = Number(item.quantity)
+
+        menuContainer.appendChild(card);
+    });
+}
+
 getJSONData();
+
+// const add2CartBtns = card.querySelectorAll('button.order-controls');

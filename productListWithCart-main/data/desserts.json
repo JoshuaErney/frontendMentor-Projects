@@ -2,64 +2,64 @@
 	{
 		"name": "Chocolate Lava Cake",
 		"price": 6.99,
-		"category": "dessert",
-		"type": "Warm Cake",
+		"category": "Dessert",
+		"type": "Cake",
 		"quantity": 12
 	},
 	{
 		"name": "New York Cheesecake",
 		"price": 5.49,
-		"category": "dessert",
+		"category": "Dessert",
 		"type": "Cake",
 		"quantity": 8
 	},
 	{
 		"name": "Tiramisu",
 		"price": 5.99,
-		"category": "dessert",
+		"category": "Dessert",
 		"type": "Classic",
 		"quantity": 10
 	},
 	{
 		"name": "Crème Brûlée",
 		"price": 6.49,
-		"category": "dessert",
+		"category": "Dessert",
 		"type": "Custard",
 		"quantity": 7
 	},
 	{
 		"name": "Strawberry Sundae",
 		"price": 4.99,
-		"category": "dessert",
+		"category": "Dessert",
 		"type": "Frozen",
 		"quantity": 15
 	},
 	{
 		"name": "Apple Pie",
 		"price": 4.49,
-		"category": "dessert",
+		"category": "Dessert",
 		"type": "Pastry",
 		"quantity": 9
 	},
 	{
 		"name": "Churros",
 		"price": 3.99,
-		"category": "dessert",
-		"type": "Fried Dough",
+		"category": "Dessert",
+		"type": "Fried",
 		"quantity": 20
 	},
 	{
 		"name": "Mango Sorbet",
 		"price": 3.49,
-		"category": "dessert",
+		"category": "Dessert",
 		"type": "Frozen",
 		"quantity": 14
 	},
 	{
 		"name": "Brownie",
 		"price": 2.99,
-		"category": "dessert",
-		"type": "Bar",
+		"category": "Dessert",
+		"type": "Brick",
 		"quantity": 18
 	}
 ]

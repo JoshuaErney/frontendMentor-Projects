@@ -89,20 +89,22 @@
                     <button type="button" class="order-controls"><i data-feather="shopping-cart"></i> Add to Cart</button>
                     <div class="qty-controls">
                         <button type="button"><i data-feather="minus-circle"></i></button>
-                        <data value="" class="food-quantity"></data>
+                        <data value="" class="food-count"></data>
                         <button type="button"><i data-feather="plus-circle"></i></button>
                     </div>
                 </div>
             </header>
             <footer class="card-footer">
-                <h3 class="food-name"></h3>
+                <div class="footer-heading">
+                    <h3 class="food-name"></h3>
+                    <div class="sub-container">
+                        <p>Price: <data class="food-price" value=""></data></p>
+                        <p>Qty: <data class="food-quantity" value=""></data></p>
+                    </div>
+                </div>
                 <section class="classification">
-                    <data class="food-category" value=""></data>
-                    <data class="food-type" value=""></data>
-                </section>
-                <section class="transactional">
-                    <data class="food-price" value=""></data>
-                    <data class="food-quantity" value=""></data>
+                    <p>Category: <data class="food-category" value=""></data></p>
+                    <p>Type: <data class="food-type" value=""></data></p>
                 </section>
             </footer>
         </article>
