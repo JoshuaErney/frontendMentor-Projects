@@ -1,60 +1,9 @@
+/* ==========================================================================
+   1. Shared Styles & Global Overrides
+   ========================================================================== */
 #cart-title,
 #dialog-title {
     color: #C83C0Eff;
-}
-
-aside#shopping-cart {
-    background-color: #fff;
-    height: 625px;
-    border: 1px solid transparent;
-    border-radius: 8px;
-    padding: 0 15px;
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    flex-direction: column;
-}
-
-div#menuItem-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1rem;
-}
-
-div.order-summary {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-
-button#confirm-order {
-    width: 100%;
-    margin: 15px 0;
-    padding: 15px;
-    border: 1px solid transparent;
-    border-radius: 25px;
-    background-color: #C83C0Eff;
-    color: #fff;
-    cursor: pointer;
-    font-weight: 600;
-}
-
-small.delivery-badge {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 0.75rem;
-    background-color: #FCF8F5;
-    padding: 20px;
-    font-weight: bold;
-}
-
-p.total-line {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 10px;
 }
 
 .feather {
@@ -62,97 +11,95 @@ p.total-line {
     stroke-width: 2;
 }
 
-.feather#checkmark-icon {
-    stroke: #85CB33;
-    width: 1.5rem;
-    height: 1.5rem;
-    margin-bottom: 15px;
+/* ==========================================================================
+   2. Menu Grid & Product Cards
+   ========================================================================== */
+div#menuItem-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(225px, 1fr));
+    gap: 2.5rem 1.5rem;
+    padding-top: 20px;
 }
 
-data#sum-total {
-    font-size: 1.75rem;
-    color: #C83C0Eff;
+article.card {
+    position: relative;
+    background-color: #fff;
+    border-radius: 12px;
+    overflow: visible;
+    /* Allows the floating button to hang over the edge */
+    transition: transform 0.2s ease;
+}
+
+article.card:hover {
+    transform: translateY(-4px);
+}
+
+article.card img {
+    border-radius: 12px;
+    display: block;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+}
+
+/* Card Controls (Add to Cart / Qty) */
+button.order-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    position: absolute;
+    bottom: 200px;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    white-space: nowrap;
+    background-color: #fff;
+    border: 1px solid #C83C0Eff;
+    border-radius: 25px;
+    padding: 12px 24px;
     font-weight: 700;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    z-index: 10;
 }
 
-span#cartItem-qty {
-    font-size: 1.25rem;
+button.order-controls:hover {
+    background-color: #BF3A0D;
+    color: #FCF8F5;
+}
+
+button.order-controls:hover .feather {
+    stroke: #FCF8F5;
 }
 
 div.qty-controls {
     display: none;
 }
 
-button.order-controls {
-    display: flex;
-    align-items: center;
-    font-weight: 600;
-    gap: .5rem;
-    border: 1px solid #C83C0Eff;
-    border-radius: 25px;
-    padding: 10px 30px;
-    position: absolute;
-    top: 230px;
-    left: 42px;
+/* Card Content Styling */
+footer.card-footer {
+    padding: 25px 10px 10px 10px;
+    background-color: transparent;
 }
 
-button.order-controls:hover {
-    background-color: #BF3A0D;
-    color: #FCF8F5;
-
-    .feather {
-        stroke: #FCF8F5;
-    }
-}
-
-article.card {
-    position: relative;
-}
-
-button#new-order {
-    width: 100%;
-    margin: 15px 0;
-    padding: 15px;
-    border: 1px solid transparent;
-    border-radius: 10px;
-    background-color: #C83C0Eff;
-    color: #fff;
-    cursor: pointer;
-    font-weight: 600;
-}
-
-section#shopping-cart {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-div.price-info {
-    display: flex;
-    justify-content: end;
-    align-items: center;
-    gap: 1rem;
-}
-
-h3.food-name {
+.food-name {
+    font-size: 1.1rem;
+    color: #281716;
+    margin-bottom: 5px;
     max-width: 125px;
 }
 
-ul#cart-container {
-    height: 100%;
-    width: 100%;
-    padding: 0 40px;
-    background-color: #FCF8F5ff;
+.food-category {
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+    color: #888;
 }
 
-#dialog-title {
-    margin: 0;
-}
-
-dialog::backdrop {
-    background-color: rgba(255, 255, 255, 0.3);
-    backdrop-filter: blur(8px);
+.food-price {
+    color: #C83C0Eff;
+    font-weight: 700;
+    font-size: 1.2rem;
 }
 
 section.classification {
@@ -161,7 +108,7 @@ section.classification {
     gap: 1rem;
 }
 
-section>p {
+section.classification p {
     font-size: 1rem;
 }
 
@@ -184,9 +131,127 @@ div.sub-container {
     gap: 1rem;
 }
 
-footer.card-footer {
-    padding: 1rem;
-    min-height: 120px;
-    background-color: #CECACA;
-    border-radius: 0 0 25px 25px;
+/* ==========================================================================
+   3. Shopping Cart (Sidebar)
+   ========================================================================== */
+aside#shopping-cart {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    position: sticky;
+    top: 20px;
+    max-height: calc(100vh - 40px);
+    height: auto;
+    min-height: 200px;
+}
+
+ul#cart-container {
+    flex-grow: 1;
+    overflow-y: auto;
+    margin-bottom: 20px;
+    padding: 0;
+    background-color: transparent;
+}
+
+ul#cart-container::-webkit-scrollbar {
+    width: 6px;
+}
+
+ul#cart-container::-webkit-scrollbar-thumb {
+    background: #CECACA;
+    border-radius: 10px;
+}
+
+span#cartItem-qty {
+    font-size: 1.25rem;
+}
+
+div.price-info {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 1rem;
+}
+
+div.order-summary {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+p.total-line {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+}
+
+data#sum-total {
+    font-size: 1.75rem;
+    color: #C83C0Eff;
+    font-weight: 700;
+}
+
+small.delivery-badge {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.75rem;
+    background-color: #FCF8F5;
+    padding: 20px;
+    font-weight: bold;
+}
+
+button#confirm-order {
+    width: 100%;
+    margin: 15px 0;
+    padding: 15px;
+    border: 1px solid transparent;
+    border-radius: 25px;
+    background-color: #C83C0Eff;
+    color: #fff;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+/* ==========================================================================
+   4. Modal / Order Confirmation Dialog
+   ========================================================================== */
+section#shopping-cart {
+    /* Specific layout for inside the dialog */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+dialog::backdrop {
+    background-color: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(8px);
+}
+
+#dialog-title {
+    margin: 0;
+}
+
+.feather#checkmark-icon {
+    stroke: #85CB33;
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-bottom: 15px;
+}
+
+button#new-order {
+    width: 100%;
+    margin: 15px 0;
+    padding: 15px;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    background-color: #C83C0Eff;
+    color: #fff;
+    cursor: pointer;
+    font-weight: 600;
 }
