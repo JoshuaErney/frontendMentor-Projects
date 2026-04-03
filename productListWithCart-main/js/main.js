@@ -42,17 +42,13 @@ getData()
             }
         };
 
-        function createFoodItem(data) {
-            console.log(foodItem(data));
-        }
-
         function addToCart() {
             data.forEach(object => {
                 cart.push(object);
             });
         }
 
-        addToCart();
+        addToCart()
     });
 
 // .then(data => {
